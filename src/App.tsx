@@ -9,6 +9,9 @@ export function App() {
         <div id="content">
             <Hero />
             <main>
+                <section>
+                    <VideoEmbed />
+                </section>
                 <section className="album-description">
                     <h1>Toho Bossa Nova 12</h1>
                     <h2>2023.05.07</h2>
@@ -18,7 +21,6 @@ export function App() {
                 <section>
                     <SongList />
                 </section>
-                <VideoEmbed />
             </main>
             <Footer />
         </div>
