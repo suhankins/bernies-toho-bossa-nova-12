@@ -1,0 +1,16 @@
+.hero {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+}
+.hero-image-blured {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    filter: blur(50px);
+    transform: scale(1, 1.1);
+}
