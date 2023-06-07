@@ -3,3 +3,33 @@
     flex-direction: column;
     align-items: center;
 }
+
+main {
+    margin: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+section {
+    width: 100%;
+}
+
+.album-description > h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.album-description > h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.album-description > p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
