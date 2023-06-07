@@ -58,14 +58,17 @@ const songs = [
 
 export function SongList() {
     return (
-        <ol className="songlist">
-            {songs.map((song) => (
-                <li key={song.name}>
-                    <h3>{song.name}</h3>
-                    <h4>/Original. {song.original}</h4>
-                    <p className="credits">{song.credits}</p>
-                </li>
-            ))}
-        </ol>
+        <>
+            <h2>Track List</h2>
+            <ol className="songlist">
+                {songs.map((song) => (
+                    <li key={song.name}>
+                        <h3>{song.name}</h3>
+                        <h4>/Original. {song.original}</h4>
+                        <p className="credits">{song.credits}</p>
+                    </li>
+                ))}
+            </ol>
+        </>
     );
 }
