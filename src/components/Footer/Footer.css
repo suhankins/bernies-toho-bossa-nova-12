@@ -1,0 +1,16 @@
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+footer > .legal {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #eee;
+}
+
+footer > .my-legal {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #eee;
+}
