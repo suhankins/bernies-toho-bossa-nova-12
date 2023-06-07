@@ -1,0 +1,40 @@
+.songlist {
+    width: 100%;
+    counter-reset: item;
+    list-style-type: none;
+}
+
+.songlist li {
+    position: relative;
+}
+
+.songlist li::before {
+    font-size: 1rem;
+    font-weight: 200;
+    position: absolute;
+    left: -1.5rem;
+    counter-increment: item;
+    content: counter(item, decimal-leading-zero);
+    margin-right: 0.2px;
+}
+
+.songlist li h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.songlist li h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #eee;
+}
+
+.songlist li .credits {
+    white-space: pre-line;
+}
