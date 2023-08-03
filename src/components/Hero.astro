@@ -1,0 +1,35 @@
+<header class="hero">
+    <picture>
+        <source srcSet="./hero-mobile.webp" media="(max-width: 600px)" />
+        <source srcSet="./hero.webp" />
+        <img class="hero-image-blured" src="./hero.webp" aria-hidden="true" />
+    </picture>
+    <picture>
+        <source srcSet="./hero-mobile.webp" media="(max-width: 600px)" />
+        <source srcSet="./hero.webp" />
+        <img
+            class="hero-image"
+            src="./hero.webp"
+            alt="Cover of Toho Bossa Nova 12 album, showing a red haired anime girl wearing red coat gazing at viewer, with dusk in the background"
+        />
+    </picture>
+</header>
+<style>
+    .hero {
+        width: 100%;
+        max-width: min(100vw, 1920px);
+        overflow: hidden;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+    .hero-image-blured {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        max-width: min(100vw, 1920px);
+        filter: blur(50px);
+        transform: scale(1, 1.1);
+    }
+</style>

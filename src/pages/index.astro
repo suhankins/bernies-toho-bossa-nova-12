@@ -1,0 +1,107 @@
+---
+import Hero from '../components/Hero.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import SongList from '../components/SongList.astro';
+import Credits from '../components/Credits.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Bernie's Toho Bossa Nova 12 website</title>
+    </head>
+    <body>
+        <div id="content">
+            <Hero />
+            <main>
+                <section>
+                    <VideoEmbed />
+                </section>
+                <section class="album-description">
+                    <h1>Toho Bossa Nova 12</h1>
+                    <h2>2023.05.07</h2>
+                    <p>イベント頒布価格1000円 第二十回博麗神社例大祭 た24ab</p>
+                    <p>ShibayanRecords にて頒布</p>
+                </section>
+                <section>
+                    <SongList />
+                </section>
+                <section>
+                    <Credits />
+                </section>
+            </main>
+            <Footer />
+        </div>
+    </body>
+</html>
+
+<style>
+    html {
+        box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+
+        color-scheme: dark;
+        color: rgba(255, 255, 255, 0.87);
+        background-color: #242424;
+
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        max-width: 50rem;
+        margin: 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .album-description > h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .album-description > h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .album-description > p {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+</style>

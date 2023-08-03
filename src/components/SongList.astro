@@ -1,5 +1,4 @@
-import './SongList.css';
-
+---
 const songs = [
     {
         name: '七人のティータイム',
@@ -55,20 +54,59 @@ const songs = [
             'Arrange. As/Hi ROCK\nVocal, Chorus, Lyric. あとり Vocal, Chorus, Guitar. うどんタイマーP\nPiano, synthesizer. 柊秀雪 Drums. もっち',
     },
 ];
+---
 
-export function SongList() {
-    return (
-        <>
-            <h2>Track List</h2>
-            <ol className="songlist">
-                {songs.map((song) => (
-                    <li key={song.name}>
-                        <h3>{song.name}</h3>
-                        <h4>/Original. {song.original}</h4>
-                        <p className="credits">{song.credits}</p>
-                    </li>
-                ))}
-            </ol>
-        </>
-    );
-}
+<h2>Track List</h2>
+<ol class="songlist">
+    {
+        songs.map((song) => (
+            <li key={song.name}>
+                <h3>{song.name}</h3>
+                <h4>/Original. {song.original}</h4>
+                <p class="credits">{song.credits}</p>
+            </li>
+        ))
+    }
+</ol>
+
+<style>
+    .songlist {
+        width: 100%;
+        counter-reset: item;
+        list-style-type: none;
+    }
+
+    .songlist li {
+        position: relative;
+    }
+
+    .songlist li::before {
+        font-size: 1rem;
+        font-weight: 200;
+        position: absolute;
+        left: -1.5rem;
+        counter-increment: item;
+        content: counter(item, decimal-leading-zero);
+        margin-right: 0.2px;
+    }
+
+    .songlist li h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: #fff;
+    }
+
+    .songlist li h4 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #eee;
+    }
+
+    .songlist li .credits {
+        white-space: pre-line;
+    }
+</style>
